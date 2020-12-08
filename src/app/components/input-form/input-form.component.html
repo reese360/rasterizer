@@ -1,0 +1,26 @@
+<div class="form-container">
+	<div class="form-item">
+		<label for="pixelSize">Pixel Size</label>
+		<input type="number" [(ngModel)]="userInputSvc.pixelSize" maxlength="2" max="99" min="10"
+			(blur)="handlePixelSizeChange()" (keyup.enter)="handlePixelSizeChange()"
+			[ngClass]="userInputSvc.invalidPixelCount ? 'invalid': 'valid'">
+	</div>
+	<div class="form-item">
+		<label for="pointCount">Anchors</label>
+		<select id="pointCount" name="pointCount" [(ngModel)]="userInputSvc.currentInputs.numAnchors"
+			(change)="handleAnchorCountChange()">
+			<option *ngFor="let anchor of numAnchors" [attr.value]="anchor">{{ anchor }}</option>
+		</select>
+
+	</div>
+	<div class="form-item">
+		<label for="rasterColor">Highlight</label>
+		<input type="text" name="rasterColor" maxlength="7" [(ngModel)]="userInputSvc.currentInputs.highlightColor"
+			(blur)="handleColorChange()" (keyup.enter)="handleColorChange()">
+	</div>
+	<div class="form-item">
+		<label for="pixelSize">Tracer Delay (ms)</label>
+		<input type="number" [(ngModel)]="userInputSvc.currentInputs.tracerDelay" (blur)="handleTracerDelayChange()"
+			(keyup.enter)="handleTracerDelayChange()">
+	</div>
+</div>

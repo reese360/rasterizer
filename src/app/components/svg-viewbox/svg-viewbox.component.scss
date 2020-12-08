@@ -1,0 +1,40 @@
+html {
+	--highlightColor: #1ab1ec;
+	--tracerDelay: 250ms;
+}
+
+.viewbox-container {
+	// outline: 1px solid #fff;
+}
+
+.pixel {
+	stroke-width: 0kpx;
+	stroke: #4b4b4b;
+	fill: #000;
+	shape-rendering: crispEdges;
+	outline: 1px solid #4b4b4b;
+	transition: fill var(--tracerDelay) linear;
+}
+
+.highlighted {
+	fill: var(--highlightColor);
+	transition: fill 0ms ease-in-out;
+}
+
+.handle {
+	stroke: #c4c4c4;
+	fill: #c4c4c4;
+	stroke-width: 2px;
+	cursor: pointer;
+
+	&:hover {
+		stroke: #2ff128;
+		stroke-width: 3px;
+	}
+}
+
+.edge {
+	stroke: #c4c4c4;
+	stroke-width: 2px;
+	shape-rendering: geometricPrecision;
+}

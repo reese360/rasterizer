@@ -1,0 +1,58 @@
+.app-container {
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+
+	display: grid;
+	grid-template-rows: auto auto auto;
+}
+
+.title {
+	padding-bottom: 5px;
+	font-size: 16px;
+}
+
+.rasterizer-container {
+	outline: 1px solid #fff;
+}
+
+#input-form {
+	grid-area: 1/1/2/2;
+}
+
+#svg-viewbox {
+	grid-area: 2/1/3/2;
+}
+
+#description {
+	grid-area: 3/1/4/2;
+}
+
+.desc {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+a {
+	color: white;
+
+	&:link,
+	&:visited,
+	&:hover,
+	&:active {
+		color: inherit;
+	}
+}
+
+.rpnet {
+	width: 100%;
+	font-size: 16px;
+	padding: 3px;
+	padding-top: 10px;
+	text-align: center;
+}
